@@ -7,6 +7,7 @@ import argparse
 MODEL_PARAM_MAP = {
     "LRGCN": ["label_max_hops", "label_temperature"],
     "Goodie": ["lp_alpha", "goodie_lamb"],
+    "LP": ["lp_alpha_lp"],
     "FISF": ["fisf_num_iterations", "fisf_alpha", "fisf_beta", "fisf_gamma", "fisf_mask_type"],
 }
 
@@ -15,6 +16,7 @@ DEFAULT_VALUES = {
     "label_max_hops": 1,
     "label_temperature": 0.25,
     "lp_alpha": 0.99,
+    "lp_alpha_lp": 0.9,
     "goodie_lamb": 1,
     "fisf_num_iterations": 50,
     "fisf_alpha": 0.9,
@@ -99,6 +101,8 @@ def build_command(dataset_name, model, params_dict, model_param_names, n_runs_va
                 cmd_parts.append(f"--label_temperature {params_dict[param_name]}")
             elif param_name == "lp_alpha":
                 cmd_parts.append(f"--lp_alpha {params_dict[param_name]}")
+            elif param_name == "lp_alpha_lp":
+                cmd_parts.append(f"--lp_alpha_lp {params_dict[param_name]}")
             elif param_name == "goodie_lamb":
                 cmd_parts.append(f"--goodie_lamb {params_dict[param_name]}")
             elif param_name == "fisf_num_iterations":
@@ -204,7 +208,8 @@ def main(config_path="hyperparameters.json") -> None:
                 "num_layers": "Num Layers",
                 "label_max_hops": "Label Max Hops",
                 "label_temperature": "Label Temperature",
-                "lp_alpha": "LP Alpha",
+                "lp_alpha": "LP Alpha (Goodie)",
+                "lp_alpha_lp": "LP Alpha (LP)",
                 "goodie_lamb": "Goodie Lambda",
                 "fisf_num_iterations": "FISF Num Iterations",
                 "fisf_alpha": "FISF Alpha",

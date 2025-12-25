@@ -48,6 +48,8 @@ def main():
     # ラベル特徴量
     parser.add_argument("--label_max_hops", type=int, default=1, choices=[1, 2, 3, 4], help="Max hops for label features.")
     parser.add_argument("--label_temperature", type=float, default=2.0, choices=[0.125, 0.25, 0.5, 1.0, 2.0], help="Softmax temperature for label features.")
+    # LP固有のオプション
+    parser.add_argument("--lp_alpha_lp", type=float, default=0.9, choices=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.99, 0.999], help="Label propagation alpha for LP model.")
     # Goodie固有のオプション
     parser.add_argument("--lp_alpha", type=float, default=0.99, choices=[0.8, 0.9, 0.99, 0.999], help="Label propagation alpha for Goodie.")
     parser.add_argument("--goodie_lamb", type=float, default=1.0, choices=[1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1, 10], help="Pseudo-label consistency weight for Goodie.")
@@ -270,7 +272,7 @@ def main():
                 dropout=args.dropout,
             ).to(device)
         elif args.model == "LP":
-            model = LP().to(device)
+            model = LP(alpha=args.lp_alpha_lp).to(device)
         else:
             raise ValueError(f"Unsupported model type: {args.model}")
 

@@ -13,10 +13,10 @@ class LP(nn.Module):
     DEFAULT_NUM_LAYERS: int = 50
     DEFAULT_ALPHA: float = 0.9
 
-    def __init__(self):
+    def __init__(self, alpha: float = None, num_layers: int = None):
         super(LP, self).__init__()
-        self.num_layers = self.DEFAULT_NUM_LAYERS
-        self.alpha = self.DEFAULT_ALPHA
+        self.num_layers = num_layers if num_layers is not None else self.DEFAULT_NUM_LAYERS
+        self.alpha = alpha if alpha is not None else self.DEFAULT_ALPHA
 
         # PyG の LabelPropagation をそのまま内部で使用
         self.lp = LabelPropagation(num_layers=self.num_layers, alpha=self.alpha)
