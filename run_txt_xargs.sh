@@ -63,6 +63,7 @@ echo "INFO: 並列数: $JOBS"
 # 実行（各行の頭にファイル名タグ付け）
 # 失敗が1つでもあれば xargs 全体の終了コードは非0になります
 export LC_ALL=C
+EXIT_CODE=0
 find "$TARGET_DIR" -type f -name '*.txt' -print0 \
 | xargs -0 -I{} -P "$JOBS" bash -c '
   f="$1"
@@ -72,6 +73,34 @@ find "$TARGET_DIR" -type f -name '*.txt' -print0 \
     echo "$name | ERROR: failed" 1>&2
     exit 1
   fi
-' _ {}
+' _ {} || EXIT_CODE=$?
 
 echo "完了: ${TARGET_DIR} 配下の全ての .txt を並列実行しました。"
+
+# CSVファイルのソートを実行
+if [[ $EXIT_CODE -eq 0 ]] || [[ $EXIT_CODE -eq 123 ]]; then
+  # xargsが一部失敗しても続行（EXIT_CODE=123は一部失敗時）
+  echo ""
+  echo "INFO: CSVファイルをソート中..."
+  SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  if [[ -f "$SCRIPT_DIR/sort_results.py" ]]; then
+    python3 "$SCRIPT_DIR/sort_results.py" "$TARGET_DIR" || {
+      echo "WARNING: CSVファイルのソートに失敗しましたが、続行します。" >&2
+    }
+  else
+    echo "WARNING: sort_results.py が見つかりません: $SCRIPT_DIR/sort_results.py" >&2
+  fi
+  
+  # 最良結果のコマンドを抽出
+  echo ""
+  echo "INFO: 最良結果のコマンドを抽出中..."
+  if [[ -f "$SCRIPT_DIR/extract_best_commands.py" ]]; then
+    python3 "$SCRIPT_DIR/extract_best_commands.py" "$TARGET_DIR" || {
+      echo "WARNING: 最良コマンドの抽出に失敗しましたが、続行します。" >&2
+    }
+  else
+    echo "WARNING: extract_best_commands.py が見つかりません: $SCRIPT_DIR/extract_best_commands.py" >&2
+  fi
+fi
+
+exit $EXIT_CODE
