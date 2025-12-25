@@ -1,0 +1,40 @@
+{
+  "global": {
+    "file_tag": "FEATURE_MISSING_0.9_SEARCH",
+    "mode": "HYPERPARAMETER_SEARCH",
+    "datasets": ["Cora", "Citeseer", "Pubmed", "Photo", "Texas", "Cornell", "Wisconsin", "Actor"],
+    "models": ["GCN", "H2GCN", "GCNmf", "PaGNN", "MLP", "LP", "LRGCN", "Goodie", "FISF"],
+    "feature_noise_rates": [0],
+    "feature_missing_rates": [0.9],
+    "label_noise_rates": [0],
+    "hidden_channels": [32, 64, 128],
+    "num_layers": [1, 2],
+    "n_runs": 20,
+    "epochs": 1000,
+    "early_stopping": true,
+    "patience": 50
+  },
+  "model_specific": {
+    "GCN": {},
+    "H2GCN": {},
+    "GCNmf": {},
+    "PaGNN": {},
+    "MLP": {},
+    "LP": {},
+    "LRGCN": {
+      "label_max_hops": [1, 2, 3],
+      "label_temperature": [0.125, 0.25, 0.5, 1.0, 2.0]
+    },
+    "Goodie": {
+      "lp_alpha": [0.9, 0.99, 0.999],
+      "goodie_lamb": [1e-3, 1e-2, 1e-1, 1]
+    },
+    "FISF": {
+      "fisf_num_iterations": [30, 50, 70, 90],
+      "fisf_alpha": [0.1, 0.5, 0.9],
+      "fisf_beta": [0.1, 0.5, 0.9],
+      "fisf_gamma": [0.1, 0.5, 0.9],
+      "fisf_mask_type": ["uniform", "structural"]
+    }
+  }
+}
