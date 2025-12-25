@@ -1,0 +1,7 @@
+model,dataset,label_noise_type,label_noise_rate,feature_missing_type,feature_missing_rate,feature_noise_rate,seed,epochs,lr,weight_decay,hidden_channels,num_layers,dropout,label_max_hops,label_temperature,lp_alpha,goodie_lamb,train,val,test,best_test_at_val,time
+GCNmf,Citeseer,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,128,1,0.5,1,2.0,0.99,1.0,0.781±0.021,0.710±0.006,0.718±0.010,0.718±0.010,38.37±9.71s
+GCNmf,Citeseer,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,64,2,0.5,1,2.0,0.99,1.0,0.780±0.018,0.707±0.008,0.716±0.011,0.716±0.011,36.02±6.91s
+GCNmf,Citeseer,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,64,1,0.5,1,2.0,0.99,1.0,0.775±0.014,0.705±0.010,0.712±0.011,0.712±0.011,38.95±5.98s
+GCNmf,Citeseer,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,128,2,0.5,1,2.0,0.99,1.0,0.769±0.014,0.704±0.011,0.710±0.006,0.710±0.006,28.10±4.66s
+GCNmf,Citeseer,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,32,2,0.5,1,2.0,0.99,1.0,0.762±0.019,0.703±0.010,0.710±0.013,0.710±0.013,36.44±6.95s
+GCNmf,Citeseer,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,32,1,0.5,1,2.0,0.99,1.0,0.753±0.024,0.699±0.012,0.702±0.017,0.702±0.017,33.66±9.40s

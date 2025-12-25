@@ -1,0 +1,7 @@
+model,dataset,label_noise_type,label_noise_rate,feature_missing_type,feature_missing_rate,feature_noise_rate,seed,epochs,lr,weight_decay,hidden_channels,num_layers,dropout,label_max_hops,label_temperature,lp_alpha,goodie_lamb,train,val,test,best_test_at_val,time
+GCN,Pubmed,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,128,2,0.5,1,2.0,0.99,1.0,0.841±0.002,0.839±0.005,0.844±0.002,0.844±0.002,3.79±0.43s
+GCN,Pubmed,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,64,2,0.5,1,2.0,0.99,1.0,0.840±0.003,0.838±0.006,0.843±0.003,0.843±0.003,3.30±0.47s
+GCN,Pubmed,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,32,2,0.5,1,2.0,0.99,1.0,0.838±0.005,0.836±0.005,0.841±0.004,0.841±0.004,2.91±0.28s
+GCN,Pubmed,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,32,1,0.5,1,2.0,0.99,1.0,0.608±0.006,0.606±0.008,0.613±0.010,0.613±0.010,2.13±0.36s
+GCN,Pubmed,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,64,1,0.5,1,2.0,0.99,1.0,0.606±0.003,0.605±0.008,0.610±0.010,0.610±0.010,2.30±0.21s
+GCN,Pubmed,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,128,1,0.5,1,2.0,0.99,1.0,0.605±0.004,0.605±0.008,0.611±0.008,0.611±0.008,2.35±0.19s

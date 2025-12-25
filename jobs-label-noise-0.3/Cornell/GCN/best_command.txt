@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.515±0.058)
+# Source: LABEL_NOISE0.3_SEARCH.csv
+# Dataset: Cornell, Model: GCN
+
+python main.py --dataset_name Cornell --model GCN --label_noise_type uniform --label_noise_rate 0.3 --feature_missing_type uniform --feature_missing_rate 0.0 --feature_noise_rate 0.0 --hidden_channels 128 --num_layers 2 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --n_runs 100 --results_csv experiments/Cornell/GCN/LABEL_NOISE0.3_SEARCH.csv

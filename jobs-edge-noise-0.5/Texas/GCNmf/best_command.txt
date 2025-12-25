@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.558±0.056)
+# Source: EDGE_NOISE0.5_SEARCH.csv
+# Dataset: Texas, Model: GCNmf
+
+python main.py --dataset_name Texas --model GCNmf --label_noise_type uniform --label_noise_rate 0.0 --feature_missing_type uniform --feature_missing_rate 0.0 --feature_noise_rate 0.0 --hidden_channels 128 --num_layers 2 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --n_runs 100 --results_csv experiments/Texas/GCNmf/EDGE_NOISE0.5_SEARCH.csv

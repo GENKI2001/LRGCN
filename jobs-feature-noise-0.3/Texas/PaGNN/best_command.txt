@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.636±0.059)
+# Source: FEATURE_NOISE0.3_SEARCH.csv
+# Dataset: Texas, Model: PaGNN
+
+python main.py --dataset_name Texas --model PaGNN --label_noise_type uniform --label_noise_rate 0.0 --feature_missing_type uniform --feature_missing_rate 0.0 --feature_noise_rate 0.3 --hidden_channels 128 --num_layers 1 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --n_runs 100 --results_csv experiments/Texas/PaGNN/FEATURE_NOISE0.3_SEARCH.csv

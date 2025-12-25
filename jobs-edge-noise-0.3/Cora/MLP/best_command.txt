@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.754±0.010)
+# Source: EDGE_NOISE0.3_SEARCH.csv
+# Dataset: Cora, Model: MLP
+
+python main.py --dataset_name Cora --model MLP --label_noise_type uniform --label_noise_rate 0.0 --feature_missing_type uniform --feature_missing_rate 0.0 --feature_noise_rate 0.0 --hidden_channels 64 --num_layers 2 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --n_runs 25 --results_csv experiments/Cora/MLP/EDGE_NOISE0.3_SEARCH.csv

@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.880±0.039)
+# Source: EDGE_NOISE0.9_SEARCH.csv
+# Dataset: Texas, Model: LRGCN
+
+python main.py --dataset_name Texas --model LRGCN --label_noise_type uniform --edge_noise_rate 0.9 --label_noise_rate 0.0 --feature_missing_type uniform --feature_missing_rate 0.0 --feature_noise_rate 0.0 --hidden_channels 128 --num_layers 1 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --label_max_hops 1 --label_temperature 0.5 --n_runs 100 --results_csv experiments/Texas/LRGCN/EDGE_NOISE0.9_SEARCH.csv

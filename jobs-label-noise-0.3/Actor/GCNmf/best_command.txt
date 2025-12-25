@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.306±0.006)
+# Source: LABEL_NOISE0.3_SEARCH.csv
+# Dataset: Actor, Model: GCNmf
+
+python main.py --dataset_name Actor --model GCNmf --label_noise_type uniform --label_noise_rate 0.3 --feature_missing_type uniform --feature_missing_rate 0.0 --feature_noise_rate 0.0 --hidden_channels 128 --num_layers 1 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --n_runs 25 --results_csv experiments/Actor/GCNmf/LABEL_NOISE0.3_SEARCH.csv

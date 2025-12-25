@@ -1,0 +1,7 @@
+model,dataset,label_noise_type,label_noise_rate,feature_missing_type,feature_missing_rate,feature_noise_rate,seed,epochs,lr,weight_decay,hidden_channels,num_layers,dropout,label_max_hops,label_temperature,lp_alpha,goodie_lamb,train,val,test,best_test_at_val,time
+PaGNN,Cornell,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,128,2,0.5,1,2.0,0.99,1.0,0.600±0.062,0.523±0.066,0.498±0.068,0.498±0.068,1.42±0.56s
+PaGNN,Cornell,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,128,1,0.5,1,2.0,0.99,1.0,0.595±0.065,0.522±0.060,0.492±0.070,0.492±0.070,1.37±0.38s
+PaGNN,Cornell,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,64,1,0.5,1,2.0,0.99,1.0,0.586±0.045,0.521±0.061,0.486±0.066,0.486±0.066,1.19±0.65s
+PaGNN,Cornell,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,64,2,0.5,1,2.0,0.99,1.0,0.584±0.053,0.516±0.058,0.486±0.066,0.486±0.066,1.36±0.35s
+PaGNN,Cornell,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,32,1,0.5,1,2.0,0.99,1.0,0.580±0.052,0.515±0.057,0.486±0.065,0.486±0.065,2.02±0.69s
+PaGNN,Cornell,uniform,0.0,struct,0.5,0.0,1000,1000,0.01,0.0005,32,2,0.5,1,2.0,0.99,1.0,0.572±0.062,0.512±0.060,0.489±0.070,0.489±0.070,1.36±0.52s

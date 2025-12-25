@@ -1,0 +1,3 @@
+
+
+python main.py --dataset_name Photo --model FISF --label_noise_rate 0 --feature_missing_rate 0.9 --feature_noise_rate 0 --hidden_channels 128 --num_layers 2 --label_max_hops 1 --label_temperature 0.25 --lp_alpha 0.99 --goodie_lamb 1 --fisf_alpha 0.1 --fisf_beta 0.9 --fisf_gamma 70 --fisf_mask_type uniform --n_runs 25 --epochs 1000 --early_stopping True --patience 100 --disable_tqdm True --results_csv experiments/Photo/FISF/FEATURE_MISSING_0.9_SEARCH.csv

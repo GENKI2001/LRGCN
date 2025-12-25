@@ -1,0 +1,7 @@
+model,dataset,label_noise_type,label_noise_rate,feature_missing_type,feature_missing_rate,feature_noise_rate,seed,epochs,lr,weight_decay,hidden_channels,num_layers,dropout,label_max_hops,label_temperature,lp_alpha,goodie_lamb,train,val,test,best_test_at_val,time
+H2GCN,Citeseer,uniform,0.0,uniform,0.9,0.0,1000,1000,0.01,0.0005,128,2,0.5,1,2.0,0.99,1.0,0.826±0.011,0.639±0.019,0.630±0.010,0.630±0.010,0.57±0.07s
+H2GCN,Citeseer,uniform,0.0,uniform,0.9,0.0,1000,1000,0.01,0.0005,32,2,0.5,1,2.0,0.99,1.0,0.808±0.007,0.638±0.019,0.625±0.009,0.625±0.009,0.59±0.09s
+H2GCN,Citeseer,uniform,0.0,uniform,0.9,0.0,1000,1000,0.01,0.0005,64,2,0.5,1,2.0,0.99,1.0,0.809±0.012,0.638±0.018,0.626±0.012,0.626±0.012,0.52±0.11s
+H2GCN,Citeseer,uniform,0.0,uniform,0.9,0.0,1000,1000,0.01,0.0005,128,1,0.5,1,2.0,0.99,1.0,0.786±0.017,0.577±0.012,0.576±0.008,0.576±0.008,0.44±0.09s
+H2GCN,Citeseer,uniform,0.0,uniform,0.9,0.0,1000,1000,0.01,0.0005,64,1,0.5,1,2.0,0.99,1.0,0.787±0.012,0.576±0.014,0.568±0.011,0.568±0.011,0.47±0.11s
+H2GCN,Citeseer,uniform,0.0,uniform,0.9,0.0,1000,1000,0.01,0.0005,32,1,0.5,1,2.0,0.99,1.0,0.787±0.011,0.574±0.015,0.568±0.011,0.568±0.011,0.53±0.12s

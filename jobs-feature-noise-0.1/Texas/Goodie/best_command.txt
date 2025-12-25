@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.727±0.056)
+# Source: FEATURE_NOISE0.1_SEARCH.csv
+# Dataset: Texas, Model: Goodie
+
+python main.py --dataset_name Texas --model Goodie --label_noise_type uniform --label_noise_rate 0.0 --feature_missing_type uniform --feature_missing_rate 0.0 --feature_noise_rate 0.1 --hidden_channels 128 --num_layers 1 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --lp_alpha 0.9 --goodie_lamb 0.001 --n_runs 100 --results_csv experiments/Texas/Goodie/FEATURE_NOISE0.1_SEARCH.csv

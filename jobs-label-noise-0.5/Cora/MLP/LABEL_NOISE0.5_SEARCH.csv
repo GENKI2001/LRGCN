@@ -1,0 +1,7 @@
+model,dataset,label_noise_type,label_noise_rate,feature_missing_type,feature_missing_rate,feature_noise_rate,seed,epochs,lr,weight_decay,hidden_channels,num_layers,dropout,label_max_hops,label_temperature,lp_alpha,goodie_lamb,train,val,test,best_test_at_val,time
+MLP,Cora,uniform,0.5,uniform,0.0,0.0,1000,1000,0.01,0.0005,128,1,0.5,1,2.0,0.99,1.0,0.636±0.010,0.590±0.014,0.575±0.032,0.575±0.032,1.08±0.27s
+MLP,Cora,uniform,0.5,uniform,0.0,0.0,1000,1000,0.01,0.0005,128,2,0.5,1,2.0,0.99,1.0,0.636±0.010,0.590±0.014,0.575±0.032,0.575±0.032,1.51±0.23s
+MLP,Cora,uniform,0.5,uniform,0.0,0.0,1000,1000,0.01,0.0005,64,1,0.5,1,2.0,0.99,1.0,0.656±0.028,0.584±0.015,0.560±0.034,0.560±0.034,1.42±0.24s
+MLP,Cora,uniform,0.5,uniform,0.0,0.0,1000,1000,0.01,0.0005,64,2,0.5,1,2.0,0.99,1.0,0.656±0.028,0.584±0.015,0.560±0.034,0.560±0.034,1.56±0.22s
+MLP,Cora,uniform,0.5,uniform,0.0,0.0,1000,1000,0.01,0.0005,32,1,0.5,1,2.0,0.99,1.0,0.676±0.039,0.573±0.018,0.553±0.037,0.553±0.037,1.63±0.37s
+MLP,Cora,uniform,0.5,uniform,0.0,0.0,1000,1000,0.01,0.0005,32,2,0.5,1,2.0,0.99,1.0,0.676±0.039,0.573±0.018,0.553±0.037,0.553±0.037,1.48±0.28s

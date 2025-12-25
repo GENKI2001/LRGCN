@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.509±0.146)
+# Source: LABEL_NOISE0.7_SEARCH.csv
+# Dataset: Texas, Model: H2GCN
+
+python main.py --dataset_name Texas --model H2GCN --label_noise_type uniform --label_noise_rate 0.7 --feature_missing_type uniform --feature_missing_rate 0.0 --feature_noise_rate 0.0 --hidden_channels 64 --num_layers 1 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --n_runs 100 --results_csv experiments/Texas/H2GCN/LABEL_NOISE0.7_SEARCH.csv

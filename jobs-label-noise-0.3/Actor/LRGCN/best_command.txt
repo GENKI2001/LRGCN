@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.653±0.007)
+# Source: LABEL_NOISE0.3_SEARCH.csv
+# Dataset: Actor, Model: LRGCN
+
+python main.py --dataset_name Actor --model LRGCN --label_noise_type uniform --label_noise_rate 0.3 --feature_missing_type uniform --feature_missing_rate 0.0 --feature_noise_rate 0.0 --hidden_channels 128 --num_layers 2 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --label_max_hops 1 --label_temperature 0.5 --n_runs 25 --results_csv experiments/Actor/LRGCN/LABEL_NOISE0.3_SEARCH.csv

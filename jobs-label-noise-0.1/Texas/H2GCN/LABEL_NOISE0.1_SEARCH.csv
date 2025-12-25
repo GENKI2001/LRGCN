@@ -1,0 +1,7 @@
+model,dataset,label_noise_type,label_noise_rate,feature_missing_type,feature_missing_rate,feature_noise_rate,seed,epochs,lr,weight_decay,hidden_channels,num_layers,dropout,label_max_hops,label_temperature,lp_alpha,goodie_lamb,train,val,test,best_test_at_val,time
+H2GCN,Texas,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,128,1,0.5,1,2.0,0.99,1.0,0.966±0.047,0.779±0.049,0.763±0.063,0.763±0.063,0.27±0.07s
+H2GCN,Texas,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,128,2,0.5,1,2.0,0.99,1.0,0.944±0.078,0.779±0.056,0.739±0.080,0.739±0.080,0.32±0.09s
+H2GCN,Texas,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,64,1,0.5,1,2.0,0.99,1.0,0.967±0.045,0.776±0.052,0.765±0.076,0.765±0.076,0.28±0.06s
+H2GCN,Texas,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,64,2,0.5,1,2.0,0.99,1.0,0.946±0.084,0.774±0.057,0.742±0.077,0.742±0.077,0.39±0.12s
+H2GCN,Texas,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,32,1,0.5,1,2.0,0.99,1.0,0.928±0.089,0.771±0.055,0.729±0.076,0.729±0.076,0.30±0.07s
+H2GCN,Texas,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,32,2,0.5,1,2.0,0.99,1.0,0.930±0.076,0.768±0.059,0.732±0.065,0.732±0.065,0.39±0.10s

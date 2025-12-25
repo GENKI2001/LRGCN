@@ -1,0 +1,7 @@
+model,dataset,label_noise_type,label_noise_rate,feature_missing_type,feature_missing_rate,feature_noise_rate,seed,epochs,lr,weight_decay,hidden_channels,num_layers,dropout,label_max_hops,label_temperature,lp_alpha,goodie_lamb,train,val,test,best_test_at_val,time
+GCNmf,Wisconsin,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,128,1,0.5,1,2.0,0.99,1.0,0.676±0.075,0.622±0.045,0.578±0.046,0.578±0.046,1.12±0.31s
+GCNmf,Wisconsin,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,128,2,0.5,1,2.0,0.99,1.0,0.666±0.069,0.619±0.044,0.574±0.050,0.574±0.050,1.10±0.32s
+GCNmf,Wisconsin,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,64,2,0.5,1,2.0,0.99,1.0,0.655±0.083,0.611±0.064,0.580±0.061,0.580±0.061,1.16±0.38s
+GCNmf,Wisconsin,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,64,1,0.5,1,2.0,0.99,1.0,0.650±0.074,0.601±0.076,0.578±0.066,0.578±0.066,1.08±0.32s
+GCNmf,Wisconsin,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,32,1,0.5,1,2.0,0.99,1.0,0.612±0.081,0.574±0.083,0.556±0.074,0.556±0.074,1.04±0.37s
+GCNmf,Wisconsin,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,32,2,0.5,1,2.0,0.99,1.0,0.606±0.076,0.574±0.083,0.555±0.073,0.555±0.073,1.03±0.36s

@@ -1,0 +1,2 @@
+model,dataset,label_noise_type,label_noise_rate,feature_missing_type,feature_missing_rate,feature_noise_rate,seed,epochs,lr,weight_decay,hidden_channels,num_layers,dropout,label_max_hops,label_temperature,lp_alpha,goodie_lamb,train,val,test,best_test_at_val,time
+Goodie,Cora,uniform,0.0,struct,0.9,0.0,1000,1000,0.01,0.0005,32,1,0.5,1,2.0,0.9,0.01,0.911±0.008,0.845±0.016,0.843±0.013,0.843±0.013,1.98±0.46s

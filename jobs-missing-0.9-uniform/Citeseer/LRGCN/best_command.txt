@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.857±0.007)
+# Source: FEATURE_MISSING_0.9_SEARCH.csv
+# Dataset: Citeseer, Model: LRGCN
+
+python main.py --dataset_name Citeseer --model LRGCN --label_noise_type uniform --label_noise_rate 0.0 --feature_missing_type uniform --feature_missing_rate 0.9 --feature_noise_rate 0.0 --hidden_channels 128 --num_layers 2 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --label_max_hops 2 --label_temperature 0.125 --n_runs 25 --results_csv experiments/Citeseer/LRGCN/FEATURE_MISSING_0.9_SEARCH.csv

@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.311±0.008)
+# Source: FEATURE_MISSING0.5_SEARCH.csv
+# Dataset: Actor, Model: H2GCN
+
+python main.py --dataset_name Actor --model H2GCN --label_noise_type uniform --label_noise_rate 0.0 --feature_missing_type struct --feature_missing_rate 0.5 --feature_noise_rate 0.0 --hidden_channels 32 --num_layers 1 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --n_runs 25 --results_csv experiments/Actor/H2GCN/FEATURE_MISSING0.5_SEARCH.csv

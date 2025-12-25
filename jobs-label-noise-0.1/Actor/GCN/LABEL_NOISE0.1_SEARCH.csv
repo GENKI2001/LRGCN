@@ -1,0 +1,7 @@
+model,dataset,label_noise_type,label_noise_rate,feature_missing_type,feature_missing_rate,feature_noise_rate,seed,epochs,lr,weight_decay,hidden_channels,num_layers,dropout,label_max_hops,label_temperature,lp_alpha,goodie_lamb,train,val,test,best_test_at_val,time
+GCN,Actor,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,64,2,0.5,1,2.0,0.99,1.0,0.375±0.029,0.313±0.007,0.295±0.007,0.295±0.007,0.66±0.17s
+GCN,Actor,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,128,2,0.5,1,2.0,0.99,1.0,0.370±0.029,0.312±0.006,0.293±0.009,0.293±0.009,0.65±0.16s
+GCN,Actor,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,32,2,0.5,1,2.0,0.99,1.0,0.344±0.028,0.305±0.011,0.290±0.008,0.290±0.008,0.53±0.19s
+GCN,Actor,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,32,1,0.5,1,2.0,0.99,1.0,0.318±0.016,0.275±0.004,0.262±0.010,0.262±0.010,0.27±0.09s
+GCN,Actor,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,64,1,0.5,1,2.0,0.99,1.0,0.318±0.016,0.275±0.004,0.262±0.010,0.262±0.010,0.27±0.09s
+GCN,Actor,uniform,0.1,uniform,0.0,0.0,1000,1000,0.01,0.0005,128,1,0.5,1,2.0,0.99,1.0,0.318±0.016,0.275±0.004,0.262±0.010,0.262±0.010,0.26±0.08s

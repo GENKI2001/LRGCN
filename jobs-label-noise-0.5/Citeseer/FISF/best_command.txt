@@ -1,0 +1,5 @@
+# Best command
+# Source: FEATURE_MISSING_0.9_SEARCH.csv
+# Dataset: Citeseer, Model: FISF
+
+python main.py --dataset_name Citeseer --model FISF --label_noise_rate 0.5 --label_noise_type uniform --feature_missing_rate 0 --feature_missing_type struct --feature_noise_rate 0 --hidden_channels 128 --num_layers 2 --label_max_hops 1 --label_temperature 0.25 --lp_alpha 0.99 --goodie_lamb 1 --fisf_alpha 0.9 --fisf_beta 0.5 --fisf_gamma 50 --fisf_mask_type uniform --n_runs 25 --epochs 1000 --early_stopping True --patience 100 --disable_tqdm True --results_csv experiments/Cora/FISF/LABEL_NOISE0.5_SEARCH.csv

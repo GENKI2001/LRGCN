@@ -1,0 +1,5 @@
+# Best command (val accuracy: 0.845±0.005)
+# Source: LABEL_NOISE0.1_SEARCH.csv
+# Dataset: Pubmed, Model: Goodie
+
+python main.py --dataset_name Pubmed --model Goodie --label_noise_type uniform --label_noise_rate 0.1 --feature_missing_type uniform --feature_missing_rate 0.0 --feature_noise_rate 0.0 --hidden_channels 64 --num_layers 1 --lr 0.01 --weight_decay 0.0005 --dropout 0.5 --epochs 1000 --lp_alpha 0.99 --goodie_lamb 0.01 --n_runs 25 --results_csv experiments/Pubmed/Goodie/LABEL_NOISE0.1_SEARCH.csv
